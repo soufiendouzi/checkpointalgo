@@ -1,0 +1,29 @@
+ALGORITHM nb_length_number_vowels_in_sentenc
+VAR
+    str : STRING:="the best in the world."
+    count : INTEGER = 0;
+    count_words : INTEGER = 1;
+    vowels : char :=['a','e','i','o','u'];
+    count_vowels : INTEGER = 0;
+BEGIN
+ /* counts each character exept space */
+
+FOR (int i=0; i< str.length(); i++) DO
+    IF(str[i] !=" ") THEN
+        count++;
+    END_IF
+    /* the number of words in the sentence */
+
+     IF(str[i] ==" ") THEN
+        count_words++;
+    END_IF
+    /* the number of vowels in the sentence */
+     IF(str[i] in vowels) THEN
+        count_words++;
+    END_IF
+END_FOR
+    write(count);
+    write(count_words) ;
+    write(count_vowels)  ;  
+
+END
